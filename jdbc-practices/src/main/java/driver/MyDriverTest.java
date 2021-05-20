@@ -1,22 +1,21 @@
-package test;
+package driver;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConnectionTest {
+public class MyDriverTest {
 
 	public static void main(String[] args) {
 		Connection conn = null;
 
 		try {
 			// 1. JDBC Driver 로딩
-			Class.forName("org.mariadb.jdbc.Driver");
+			Class.forName("driver.MyDriver");
 
 			// 2. 연결하기
-			String url = "jdbc:mysql://192.168.80.101:3307/webdb?charset=utf8";
+			String url = "jdbc:mydb://127.0.0.1:2202/webdb";
 			conn = DriverManager.getConnection(url, "webdb", "webdb");
-
 			// 3. 연결 성공
 			System.out.println("ok:" + conn);
 		} catch (ClassNotFoundException e) {
@@ -34,6 +33,6 @@ public class ConnectionTest {
 			}
 
 		}
-
 	}
+
 }
