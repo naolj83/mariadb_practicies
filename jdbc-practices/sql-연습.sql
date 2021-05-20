@@ -11,5 +11,5 @@ select emp_no, birth_date, first_name
  -- insert
  insert into dept values(null, '총무');
 
- -- delete
- delete from dept where no = 3; 
+ -- deletedept
+ delete from dept where no = 4; 
