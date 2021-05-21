@@ -4,7 +4,7 @@ public class BookVo {
 
 	private int no;
 	private String title;
-	private int money;
+	private int price;
 	
 	public int getNo() {
 		return no;
@@ -18,14 +18,15 @@ public class BookVo {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public int getMoney() {
-		return money;
+	public int getPrice() {
+		return price;
 	}
-	public void setMoney(int money) {
-		this.money = money;
+	public void setPrice(int price) {
+		this.price = price;
 	}
 	@Override
 	public String toString() {
-		return "BookVo [no=" + no + ", title=" + title + ", money=" + money + "]";
+		return "BookVo [no=" + no + ", title=" + title + ", price=" + price + "]";
 	}
 }
+
