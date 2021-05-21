@@ -22,7 +22,7 @@ public class DeleteTest02 {
 			Class.forName("org.mariadb.jdbc.Driver");
 			
 			//2. 연결하기
-			String url = "jdbc:mysql://192.168.80.101:3307/employees?charset=utf8";
+			String url = "jdbc:mysql://192.168.80.131:3307/employees?charset=utf8";
 			conn = DriverManager.getConnection(url, "hr", "hr");
 			
 			//3. SQL문 준비
