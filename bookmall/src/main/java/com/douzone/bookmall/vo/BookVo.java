@@ -2,14 +2,14 @@ package com.douzone.bookmall.vo;
 
 public class BookVo {
 
-	private int no;
+	private long no;
 	private String title;
-	private int price;
-	
-	public int getNo() {
+	private long price;
+	private long categoryNo;
+	public long getNo() {
 		return no;
 	}
-	public void setNo(int no) {
+	public void setNo(long no) {
 		this.no = no;
 	}
 	public String getTitle() {
@@ -18,15 +18,21 @@ public class BookVo {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public int getPrice() {
+	public long getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(long price) {
 		this.price = price;
+	}
+	public long getCategoryNo() {
+		return categoryNo;
+	}
+	public void setCategoryNo(long categoryNo) {
+		this.categoryNo = categoryNo;
 	}
 	@Override
 	public String toString() {
-		return "BookVo [no=" + no + ", title=" + title + ", price=" + price + "]";
+		return "BookVo [no=" + no + ", title=" + title + ", price=" + price + ", categoryNo=" + categoryNo + "]";
 	}
 }
 
