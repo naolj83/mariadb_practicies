@@ -14,13 +14,9 @@ order by hire_date;
 
 -- 문제3. (count)
 -- 여직원과 남직원은 각 각 몇 명이나 있나요?
-select count(*) as 여직원
-from employees
-where gender = 'f';
-
-select count(*) as 남직원
-from employees
-where gender = 'm';
+  select count(*), gender
+    from employees
+group by gender;
 
 -- 문제4.
 -- 현재(where to_date='9999-01-01') 근무하고 있는 직원 수는 몇 명입니까? (salaries 테이블을 사용합니다.)
@@ -48,8 +44,9 @@ order by length(dept_name) desc;
 -- 문제8.
 -- 현재 급여가 120,000이상 받는 사원은 몇 명이나 있습니까? where절 사용
 select count(*)
-from salaries
-where salary >= 120000;
+ from salaries
+where to_date = '9999-01-01'
+  and salary >= 120000;
 
 -- 문제9.
 -- 어떤 직책들이 있나요? 중복 없이 이름이 긴 순서대로 출력해 보세요.
@@ -65,7 +62,7 @@ where to_date = '9999-01-01' and title = 'Engineer';
 
 -- 문제11
 -- 사번이 13250(Zeydy)인 지원이 직책 변경 상황을 시간순으로 출력해보세요.
-select emp_no, title
-from titles
-where emp_no = '13250'
+  select emp_no, title, from_date, to_date
+    from titles
+   where emp_no = '13250'
 order by sysdate();
